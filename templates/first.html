@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="2px">
+            <tr>
+                <th>movie_name</th>
+                <th>director</th>
+                <th>hero</th>
+                <th>heroine</th>
+            </tr>
+        {% for i in display %}
+            <tr>
+                <td>{{ i.movie_name }}</td>
+                <td>{{ i.director }}</td>
+                {% if i.hero == "raviteja" %}
+                <td></td>
+                {% else %}
+                <td>{{ i.hero }}</td>
+                {% endif %}
+                <td>{{ i.heroine }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
