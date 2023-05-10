@@ -6,8 +6,12 @@ class UserForm(forms.ModelForm):
         model=User
         fields=['username','email','password']
         widgets={'password':forms.PasswordInput}
+        labels={'username':'Username ','email':'Email ','password':'Password ',}
+        help_texts={'username':''}
 
 class ProfileForm(forms.ModelForm):
     class Meta:
         model=Profile
         fields=['adress','profile_pic']
+        labels={'adress':'adress ','profile_pic':'profile-pic ',}
+        widgets={'adress':forms.Textarea(attrs={'cols':21,'rows':2})}

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +9,27 @@
 </head>
 <body>
     <center>
-        <h1>user registration</h1>
+        <img src="{% static 'images/prime11.jpg' %}" alt="" width="15%" height="7%">
         <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-
+           
+            <div><br>
+                <h1 style="color: orange;">Create account</h1>
+                {% csrf_token %}
                 {{ufo.as_p}}
                 {{pfo.as_p}}
 
-            <input type="submit" value="submit">
+                <input type="submit" value="submit"><br><br><br>
+            </div>
         </form>
     </center>
+    <style>
+        form div {
+            width: 27%;
+            background-color: rgb(50, 47, 47);
+            border-radius: 20px;
+            border: 2px solid blueviolet;
+            color: white;
+        }
+    </style>
 </body>
 </html>

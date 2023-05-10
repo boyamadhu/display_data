@@ -30,6 +30,11 @@ urlpatterns = [
     path('dummy/',dummy,name='dummy'),
     path('prime_home/',prime_home,name='prime_home'),
     path('catagories/',catagories,name='catagories'),
+    path('store/',store,name='store'),
+    path('display_profile/',display_profile,name='display_profile'),
+    path('practice/',practice,name='practice'),
+    path('update_password/',update_password,name='update_password'),
+    path('forgot_password/',forgot_password,name='forgot_password'),
     
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
